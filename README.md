@@ -14,3 +14,38 @@ Finally, it will save the output image in the new file specified by the output f
 To understand how to start working on the project, refer to the Project Starting Point
 section.
 
+# MiniVSFS
+MiniVSFS, based on VSFS, is fairly simple – a block-based file system structure with a
+superblock, inode and data bitmaps, inode tables, and data blocks. Compared to
+the regular VSFS, MiniVSFS cuts a few corners:
+●​ Indirect pointer mechanism is not implemented
+●​ Only supported directory is the root (/) directory
+●​ Only one block each for the inode and data bitmap
+●​ Limited size and inode count
+
+# What You’ll Build
+# MKFS_BUILDER
+
+mkfs_builder \​
+--image out.img \​
+--size-kib <180..4096> \​
+--inodes <128..512>
+
+●​ image: the name of the output image
+●​ size-kib: the total size of the image in kilobytes (multiple of 4)
+●​ inodes: number of inodes in the file system
+
+# MKFS_ADDER
+
+mkfs_adder \​
+--input out.img
+--output out2.img​
+--file <file>
+
+●​ input: the name of the input image
+●​ output: name of the output image
+●​ file: the file to be added to the file system
+
+# Output
+●​ the updated output binary image with the file added
+
