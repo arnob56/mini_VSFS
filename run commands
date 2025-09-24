@@ -1,0 +1,27 @@
+gcc -O2 -std=c17 -Wall -Wextra mkfs_builder_skeleton.c -o mkfs_builder          // Compile
+
+gcc -O2 -std=c17 -Wall -Wextra mkfs_adder_skeleton.c -o mkfs_adder              // compile
+
+
+
+./mkfs_builder --image out.img --size-kib 1024 --inodes 256                   //image file creation with declaring the size and inode
+
+*If you run successfully.... You willl see this below line
+
+
+File system image 'out.img' has been successfully created.
+
+
+
+
+
+
+./mkfs_adder --input out.img --output out2.img --file file_29.txt                //file overwritting on image file 
+
+*If you run successfully.... You willl see this below line
+
+File 'file_29.txt' has been successfully added to the file system image 'out2.img'.
+Updated file system image 'out2.img' has been written successfully.
+
+
+
