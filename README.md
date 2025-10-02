@@ -1,6 +1,7 @@
 # MiniVSFS: A C-based VSFS Image Generator
 
-A very small file system for operating system. Done in CSE 321 : Operating System in Brac Universitty
+A very small file system for operating system. Done in CSE 321 : Operating System in Brac University.
+Note: The project was done in Ubuntu Platform
 
 # Introduction 
 
